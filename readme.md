@@ -10,7 +10,7 @@ We'll run through some more details below, but first some quick background on si
 
 Single-Spa applications offer the ability to run multiple applications - or Micro-Frontends - alongside each other as in-browser modules, independent of the tech-stack used to create those MFEs. 
 
-But singles-pa applications can be fiddly to create. Each requires its own tooling and bundling configuration, and while there are packages which assist with that it is still a non-trivial.
+But single-spa applications can be fiddly to create. Each requires its own tooling and bundling configuration, and while there are packages which assist with that it is still a non-trivial.
 
 Furthermore, testing these applications together can involve configuring and coordinating multiple dev servers across different repos and tech stacks.
 

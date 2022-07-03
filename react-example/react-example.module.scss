@@ -1,0 +1,28 @@
+.app {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  .logo {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .rotating {
+    animation: rotate 5s infinite linear;
+  }
+  .hello {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

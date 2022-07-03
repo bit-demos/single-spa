@@ -1,0 +1,39 @@
+---
+description: Bundles a SingleSpa target for consumption in a single spa application
+labels: ['script', 'webpack', 'react', 'single spa', 'app', 'netlify']
+---
+
+The Single Spa react example component demonstrates the bundling of a React component into a module configured for consumption in a single-spa application.  
+
+To achieve that, the Single Spa React component uses a [Webpack transformer](https://bit.dev/teambit/webpack/content/configure-webpack/~compositions) that sets the target output for the bundler to [SystemJs](https://webpack.com/libraries).
+
+Note some foibles of single-spa when building the single-spa compatible module from an app component:
+1. You must define an orgName and projectName for the webpack configuration
+1. You must configure some pattern for the entry file in the webpack configuration. This is the file that webpack will use to create the systemJs module for 
+single-spa. Here we have configured it as `<orgName>-<projectName>`, so if your org name is `org1` and the project is `new-proj` then you will need to have a file called
+`org1-newProj.ts` as your entry file
+1. This entry file is where you run the single-spa magic on your component's code to create the mount, unmount and bootstrap functions that single-spa requires.
+See the `teambit-singlespa-react-example.ts` file in this component for details. 
+1. Once you have configured things as required (most is pre-configured for you if you fork this component) you can run `bit build` and you should then get the 
+bundled output in the component's capsule, under `react-common-js/<component-name-without-namespaces>/public`;
+1. You can run `serve -l <port_number>` from that directory and then use the single-spa component in a single-spa root config app to demo your output
+
+
+To examine and use this Single Spa React app component, fork it to your workspace:
+```bash
+bit fork learnbit.apps.single-spa/react-example
+```
+
+Configure the new forked app component on your [workspace.json](https://bit.dev/teambit/workspace/content/workspace-configuration/~compositions):
+
+```bash
+bit use learnbit.apps.single-spa/react-example
+```
+
+Test the app's build by running the following:
+
+```bash
+bit build learnbit.apps.single-spa/react-example
+```
+
+Check the generated output in the app's corresponding [Capsule](https://bit.dev/teambit/component/content/capsule/~compositions) (run `bit capsule list` to get the workspace capsule root dir path).

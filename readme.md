@@ -67,3 +67,15 @@ See how we have added these to our sample root-config app.
 You will also notice the angular and react dependencies. For each you must use the systemjs/UMD bundle for the relevant version of the framework. The [ESM Bundle project](https://medium.com/@joeldenning/an-esm-bundle-for-any-npm-package-5f850db0e04d) contains relevant outputs for pretty much any framework and version you're likely to use (though it doesn't have for all minor/patch versions, so you may have to search a bit).
 
 We use the latest react UMD output, and have created the required import-map for Angular 13 in our root-config application for compatibility with our demo applications.
+
+## Fork our components 
+
+The components in this project are also present on bit.cloud, and you can use them as the basis for your own single-spa React and Angular applications.
+
+App components:
+React - https://bit.cloud/learnbit/apps/single-spa/react-example
+Angular - https://bit.cloud/learnbit/apps/single-spa/angular-example
+
+Webpack Transformers:
+React - https://bit.cloud/bit-foundations/apps/single-spa/react/webpack-transformer
+Angular - https://bit.cloud/bit-foundations/apps/single-spa/angular/webpack-transformer

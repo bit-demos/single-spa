@@ -40,8 +40,7 @@
     "policy": {
       "dependencies": {
         "@bit-foundations/apps.single-spa.angular.webpack-transformer": "0.0.2",
-        "@bit-foundations/apps.single-spa.react.webpack-transformer": "0.0.3",
-        "@cloudflare/workers-types": "3.3.1",
+        "@bit-foundations/apps.single-spa.react.webpack-transformer": "0.0.4",
         "@learnbit/apps.single-spa.react-example": "0.0.1",
         "@teambit/angular-apps": "0.0.5",
         "@teambit/cloud-providers.deployers.netlify": "0.0.7",

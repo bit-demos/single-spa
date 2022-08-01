@@ -27,7 +27,7 @@ export const SingleSpaReactApp: ReactAppOptions = {
   /* the name of the app (used only by Bit) */
   name: 'react-example',
   /* an entry file for the bundler (used in dev and prod) */
-  entry: ["./teambit-singlespa-react-example"],
+  entry: [require.resolve("./teambit-singlespa-react-example")],
   /* webpack transformers to modify this app's default webpack config */
   webpackTransformers: [singleSpaReactWebpackTransformer(opts), (config) => {
     console.log(config.raw)

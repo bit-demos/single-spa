@@ -17,9 +17,9 @@
     },
     "single-spa/react-example": {
         "scope": "learnbit.apps",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "react-example"
     },
-    "$schema-version": "14.9.0"
+    "$schema-version": "15.0.0"
 }

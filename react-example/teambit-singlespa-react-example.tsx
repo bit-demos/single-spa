@@ -4,6 +4,9 @@ import singleSpaCss from 'single-spa-css';
 import singleSpaReact from "single-spa-react";
 import { ReactExampleApp } from "./app";
 
+// Bit bundles locally without miniCssExtract, so dont use the webpackExtractedCss feature locally
+const shouldWebpackExtractedCss = process.env.NODE_ENV != "development";
+
 const cssLifecycles = singleSpaCss({
   // required: a list of CSS URLs to load
   // can be omitted if webpackExtractedCss is set to true, do not specify Webpack extracted css files here
@@ -12,7 +15,7 @@ const cssLifecycles = singleSpaCss({
   // optional: defaults to false. This controls whether extracted CSS files from Webpack
   // will automatically be loaded. This requires using the ExposeRuntimeCssAssetsPlugin,
   // which is documented below.
-  webpackExtractedCss: true,
+  webpackExtractedCss: shouldWebpackExtractedCss,
 
   // optional: defaults to true. Indicates whether the <link> element for the CSS will be
   // unmounted when the single-spa microfrontend is unmounted.

@@ -17,9 +17,15 @@
     },
     "single-spa/react-example": {
         "scope": "learnbit.apps",
-        "version": "0.0.2",
+        "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "react-example"
+        "rootDir": "react-example",
+        "config": {
+            "bit-foundations.apps/single-spa/single-spa-react-env@0.0.3": {},
+            "teambit.envs/envs": {
+                "env": "bit-foundations.apps/single-spa/single-spa-react-env"
+            }
+        }
     },
     "$schema-version": "15.0.0"
 }

@@ -36,7 +36,7 @@ The following steps are to quickly run the two applications and render them in t
 1. (Once the build has succeeded, you can verify that the correct single-spa outputs have been created by running `bit capsule list` and navigate to the workspace capsule. 
 Inside the folder for the react example, the app output will be inside the `artifacts/app` folder.
 For the Angular app, it's under the `public` folder.)
-1. Open two terminals, run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).
+1. Open two terminals at the root of the project (not in the capsule), run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).
 1. Note down the port numbers and adjust the import-map entries in the root-config app's `index.ejs` file as necessary.
 1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the page
 

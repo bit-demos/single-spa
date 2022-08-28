@@ -32,6 +32,10 @@ export const AngularExampleOptions: AngularAppOptions = {
    * Angular options for `bit run`
    */
   angularServeOptions: angularOptions,
+  /**
+   * port range for application dev server when running `bit run`
+   */
+  portRange: [3040, 3050],
 
   webpackTransformers: [singleSpaAngularTranformer(angularOptions)]
 };

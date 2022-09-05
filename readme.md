@@ -38,12 +38,7 @@ Inside the folder for the react example, the app output will be inside the `arti
 For the Angular app, it's under the `public` folder.)
 1. Open two terminals at the root of the project (not in the capsule), run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).
 1. Note down the port numbers and adjust the import-map entries in the root-config app's `index.ejs` file as necessary.
-1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the page
-
-
-:::info temporary patch for running react app locally
-The `bit run` step above does not currently work with react (CORS issues). We are working on resolving this asap, and as an alternative for now, follow the steps above below for finding the outputs in the capsule, go to the direcrtory containing the react app artifact files and run `serve -l <port>` which will serve the app's systemjs module from the capsule directory at the given port. You will also need to add a serve.json file in that directory, in which you add the cors header so that the react app renders correctly in the single-spa application
-:::
+1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the pag
 
 
 ## More Detail

@@ -13,7 +13,13 @@
         "scope": "learnbit.apps",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "angular-example"
+        "rootDir": "angular-example",
+        "config": {
+            "teambit.angular/versions/angular-v13@1.2.13": {},
+            "teambit.envs/envs": {
+                "env": "teambit.angular/versions/angular-v13"
+            }
+        }
     },
     "single-spa/react-example": {
         "scope": "learnbit.apps",

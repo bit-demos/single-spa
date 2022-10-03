@@ -37,13 +37,21 @@
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
     "packageManager": "teambit.dependencies/yarn",
+    "overrides": {
+      "@angular/core": "13.2.7",
+      "@angular/compiler": "13.2.7",
+      "@angular/common": "13.2.7",
+      "@angular/compiler-cli": "13.2.7",
+      "@angular/platform-browser": "13.2.7",
+      "@angular/platform-browser-dynamic": "13.2.7"
+    },
     "policy": {
       "dependencies": {
         "@bit-foundations/apps.single-spa.angular.webpack-transformer": "0.0.2",
         "@bit-foundations/apps.single-spa.react.webpack-transformer": "0.0.4",
         "@learnbit/apps.single-spa.react-example": "0.0.1",
-        "@teambit/angular-apps": "0.0.5",
         "@teambit/cloud-providers.deployers.netlify": "0.0.7",
+        "@teambit/angular": "1.2.13",
         "@types/react": "17.0.38",
         "@types/react-dom": "17.0.11",
         "@types/react-router": "5.1.18",
@@ -68,10 +76,10 @@
       },
       "peerDependencies": {
         "@angular/cli": "~13.2.0",
-        "@angular/platform-browser-dynamic": "14.0.3",
         "@testing-library/react": "^12.0.0"
       }
-    }
+    },
+    "nodeLinker": "hoisted"
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your
@@ -98,5 +106,5 @@
   },
   "single-spa/react-example": {},
   "single-spa/angular-example": {},
-  "teambit.angular/angular@1.1.3": {}
+  "teambit.angular/angular@1.2.13": {}
 }

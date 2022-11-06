@@ -29,27 +29,29 @@ This project contains two separate workspaces.
 
 ## Tl;Dr
 
+The following steps are to quickly run the two applications and render them in the root-config app:  
 
-The following steps are to quickly run the two applications and render them in the root-config app:
-1. Navigate to the `root-config` directory and run `npm i` and then `npm run start`. You should see the root-config app starting up.
-1. In a separate terminal, in the repo's root folder run `bit install`, then `bit compile` (twice) and then `bit build`. 
-1. (Once the build has succeeded, you can verify that the correct single-spa outputs have been created by running `bit capsule list` and navigate to the workspace capsule. 
-Inside the folder for the react example, the app output will be inside the `artifacts/app` folder.
-For the Angular app, it's under the `public` folder.)
-1. Open two terminals at the root of the project (not in the capsule), run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).
-1. Note down the port numbers and adjust the import-map entries in the root-config app's `index.ejs` file as necessary.
-1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the pag
+1. Navigate to the `bit-single-spa-sample-apps` directory
+1. Navigate to the `root-config` directory and run `npm i` and then `npm run start`. You should see the root-config app starting up  
+1. In a separate terminal, in the repo's root folder run `bit install`, then `bit compile` (twice) and then `bit build`.   
+1. Open two terminals at the root of the project (not in the capsule), run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).  
+1. Note down the port numbers and adjust the import-map entries in the root-config app's `index.ejs` file as necessary.  
+1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the page
+
+(Advanced: You can verify that the correct single-spa outputs have been created by running `bit capsule list` and navigate to the `workspace` capsule. 
+Inside the folder for the react example, the app output will be inside the `artifacts/app` folder. For the Angular app, it's under the `public` folder.)  
 
 
 ## More Detail
 
 ## React
 
-Beyond creating your react component/application, these are the steps to create a react single-spa application with Bit:
-1. We use [`single-spa-react`](https://single-spa.js.org/docs/ecosystem-react/) to create the single-spa output from our application/component, including the required `mount`, `unmount` and `bootstrap` functions.
-2. This output must then be fed into the bundler (we're currently using webpack) as the entry file - our webpack transformer expects this file to be named `<org-name>-<project_name>`, from the `opts` object in the react-app.ts file.
-3. The .react-app.ts file is where you configure your app component. Here you add the webpack configuration (transformer), and add your `opts` to configure the single-spa application. The main opts fields to look out for are orgName (which is used by single-spa to determine that this component should be an external, runtime, dependency, and should be **different** to your bit org name) and project name, which is essentially the name of your application.
-4. To test locally, run `bit run <app-name>` and note down both the port number and output file. This should be configured inside your root-config app's index.ejs file (see below)
+Beyond creating your react component/application, these are the steps to create a react single-spa application with Bit:  
+
+1. We use [`single-spa-react`](https://single-spa.js.org/docs/ecosystem-react/) to create the single-spa output from our application/component, including the required `mount`, `unmount` and `bootstrap` functions.  
+1. This output must then be fed into the bundler (we're currently using webpack) as the entry file - our webpack transformer expects this file to be named `<org-name>-<project_name>`, from the `opts` object in the react-app.ts file.  
+1. The .react-app.ts file is where you configure your app component. Here you add the webpack configuration (transformer), and add your `opts` to configure the single-spa application. The main opts fields to look out for are orgName (which is used by single-spa to determine that this component should be an external, runtime, dependency, and should be **different** to your bit org name) and project name, which is essentially the name of your application.
+1. To test locally, run `bit run <app-name>` and note down both the port number and output file. This should be configured inside your root-config app's index.ejs file (see below)
 
 ## Angular
 

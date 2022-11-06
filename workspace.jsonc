@@ -104,7 +104,7 @@
       "teambit.angular/angular"
     ]
   },
-  "single-spa/react-example": {},
-  "single-spa/angular-example": {},
+  "learnbit.apps/single-spa/react-example": {},
+  "learnbit.apps/single-spa/angular-example": {},
   "teambit.angular/angular@1.2.13": {}
 }

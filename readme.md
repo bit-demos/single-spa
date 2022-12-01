@@ -33,7 +33,7 @@ The following steps are to quickly run the two applications and render them in t
 
 1. Navigate to the `bit-single-spa-sample-apps` directory
 1. Navigate to the `root-config` directory and run `npm i` and then `npm run start`. You should see the root-config app starting up  
-1. In a separate terminal, in the repo's root folder run `bit install`, then `bit compile` (twice) and then `bit build`.   
+1. In a separate terminal, in the repo's root folder run `bit install`, then `bit compile`.  
 1. Open two terminals at the root of the project (not in the capsule), run `bit run <app-name>` for the two applications (run `bit app list` to get the app names).  
 1. Note down the port numbers and adjust the import-map entries in the root-config app's `index.ejs` file as necessary.  
 1. Open a browser to the localhost port of the root-config app, and you should now see both Angular and React applications on the page
